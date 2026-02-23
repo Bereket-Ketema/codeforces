@@ -4,7 +4,7 @@ arr2 = list(map(int,input().split()))
 first, second = 0, 0
 
 store = []
-while first < len(arr1) and second < len(arr1):
+while first < len(arr1) and second < len(arr2):
   if arr1[first] <= arr2[second]:
     store.append(arr1[first])
     first += 1
