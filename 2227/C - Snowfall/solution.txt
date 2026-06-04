@@ -1,0 +1,29 @@
+import sys
+ 
+input = sys.stdin.readline
+ 
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+ 
+    both = []
+    only2 = []
+    neither = []
+    only3 = []
+ 
+    for x in a:
+        d2 = x % 2 == 0
+        d3 = x % 3 == 0
+ 
+        if d2 and d3:
+            both.append(x)
+        elif d2:
+            only2.append(x)
+        elif d3:
+            only3.append(x)
+        else:
+            neither.append(x)
+ 
+    ans = both + only2 + neither + only3
+    print(*ans)
