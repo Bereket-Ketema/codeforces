@@ -1,0 +1,7 @@
+n=int(input())
+char=input()
+anton= lambda a:a=='A'
+danik=lambda d:d=='D'
+A=list(filter(anton,char))
+D=list(filter(danik,char))
+print("Anton") if len(A)>len(D) else (print("Danik") if len(A)<len(D) else print("Friendship"))
